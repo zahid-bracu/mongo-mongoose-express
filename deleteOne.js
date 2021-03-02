@@ -26,18 +26,19 @@ const customerInfoSchema= new mongoose.Schema({
 })
 
 
-// model & collection setup (customerInfo is collection)
+// model & collection setup (customer info is collection)
 const customerInfo=new mongoose.model('customerInfo',customerInfoSchema);
 
 
-// read data
-const readDocument = async ()=>{
-    try{
-        const data= await customerInfo.find({}).select({name:1}).sort({name : -1})
-        console.log(data);
-    }catch(err){
-        console.log(err);
-    }
-}
 
-readDocument();
+// sending multiple data
+ const deleteOneData = async(_id)=>{
+     try{
+         var result= await customerInfo.findByIdAndDelete({_id});
+         console.log(result);
+     }catch(err){
+         console.log(err)
+     }
+ }
+
+ deleteOneData("603bc5adfcdda70ac41016db");

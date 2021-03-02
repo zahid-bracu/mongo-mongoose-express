@@ -26,18 +26,25 @@ const customerInfoSchema= new mongoose.Schema({
 })
 
 
-// model & collection setup (customerInfo is collection)
+// // model & collection setup (customer info is collection)
 const customerInfo=new mongoose.model('customerInfo',customerInfoSchema);
 
 
 // read data
-const readDocument = async ()=>{
+const updateDocument = async (_id)=>{
     try{
-        const data= await customerInfo.find({}).select({name:1}).sort({name : -1})
+        const data= await customerInfo.findByIdAndUpdate({_id},{
+            $set:{
+                name: "Kumala"
+            }
+        },{
+            new:true,
+            useFindAndModify:false
+        });
         console.log(data);
     }catch(err){
         console.log(err);
     }
 }
 
-readDocument();
+updateDocument("603bc5adfcdda70ac41016db");
