@@ -60,7 +60,7 @@ const createData = async ()=>{
         const musakaInfo=new customerInfo({
             name:"Thor",
             ctype:"regular",
-            mail:"Spookygmail.com",
+            mail:"Spooky@gmail.com",
             key:321,
             active:false
         })

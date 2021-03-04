@@ -50,9 +50,9 @@ const createData = async ()=>{
     try{
         // pushing some data to collection
         const musakaInfo=new customerInfo({
-            name:"Hukuta",
+            name:"Lukuta",
             ctype:"regular",
-            key:129,
+            key:149,
             active:false
         })
         
