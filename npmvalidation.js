@@ -9,6 +9,7 @@ mongoose.connect("mongodb://localhost:27017/customer", { useNewUrlParser: true, 
 .catch((err)=>console.log(err))
 
 
+
 // scehma setting
 const customerInfoSchema= new mongoose.Schema({
     name:{

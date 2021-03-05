@@ -2,7 +2,7 @@ const mongoose =require('mongoose'); // add mongoose
 
 
 // connecting / creating to databases (customer is database)
-mongoose.connect("mongodb://localhost:27017/customer", { useNewUrlParser: true, useUnifiedTopology: true,})
+mongoose.connect("mongodb://localhost:27017/customer", { useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
 .then(()=> {
     console.log("Connected")
 })
