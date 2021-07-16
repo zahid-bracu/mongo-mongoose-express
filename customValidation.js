@@ -4,7 +4,7 @@ const mongoose =require('mongoose'); // add mongoose
 
 
 // connecting / creating to databases (customer is database)
-mongoose.connect("mongodb://localhost:27017/customer", { useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
+mongoose.connect("mongodb+srv://demoUser:9augustbd@cluster0.rwjuz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
 .then(()=> {
     console.log("Connected")
 })
@@ -47,11 +47,11 @@ const customerInfoSchema= new mongoose.Schema({
 // model & collection setup (customer info is collection)
 const customerInfo=new mongoose.model('customerInfo',customerInfoSchema);
 
-
+// very nice
 const createData = async ()=>{
     try{
         // pushing some data to collection
-        const musakaInfo=new customerInfo({
+            const musakaInfo=new customerInfo({
             name:"Lukuta",
             ctype:"regular",
             key:149,
