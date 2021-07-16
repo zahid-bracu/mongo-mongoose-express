@@ -26,7 +26,7 @@ const customerInfoSchema= new mongoose.Schema({
 
 })
 
-
+  
 // // model & collection setup (customer info is collection)
 const customerInfo=new mongoose.model('customerInfo',customerInfoSchema);
 
