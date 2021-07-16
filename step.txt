@@ -1,0 +1,6 @@
+mongoose require
+mongoose connect
+schema set from mongoose
+model set from schema
+run function over model
+
